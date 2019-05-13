@@ -1,0 +1,6 @@
+---
+# defaults file for roles/tomcat_aws
+region: ap-south-1
+instance_type: t2.micro
+ami: ami-5b673c34  # Redhat 7.5
+keypair: redhat-7.5 # pem file name
