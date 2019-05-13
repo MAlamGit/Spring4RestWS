@@ -14,11 +14,17 @@
     ANSIBLE_CONFIG: "ansible.cfg"
   roles:
     - tomcat
+  
+  tasks:
+  
+  - copy:
+      src: /var/lib/jenkins/workspace/Ansible-Deploy-Tomcat/Spring4-0.0.1.war
+      dest: /opt/jenkins-deploy/Spring4RestWS/target/Spring4-0.0.1.war
 
   tasks:
   
   - copy:
-      src: /opt/jenkins-deploy/target/Spring4-0.0.1.war
+      src: /opt/jenkins-deploy/Spring4RestWS/target/Spring4-0.0.1.war
       dest: /usr/local/apache-tomcat-8.0.23/webapps/
       mode: 0777
       owner: root
